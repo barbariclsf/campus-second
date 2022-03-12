@@ -1,0 +1,22 @@
+page,
+view,
+text,
+swiper,
+image {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+page {
+	background-color: #f7f7f7;
+	font-size: 28rpx;
+	
+}
+
+image {
+	width: 100%;
+}
+navigator{
+	hover-class:"none" ;
+}
