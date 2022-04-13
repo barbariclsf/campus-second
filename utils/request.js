@@ -1,6 +1,6 @@
 
 // 单体本地接口
-const commonUrl = "http://192.168.43.164:8080/";
+const commonUrl = "http://localhost:8080/";
 
 
 /**

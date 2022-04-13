@@ -150,7 +150,7 @@
 						uni.uploadFile({
 							filePath: v,
 							name: 'file',
-							url: 'http://localhost:8080/upload/uploadImg',
+							url: 'http://192.168.0.104:8080/upload/uploadImg',
 							header: {
 								Authorization: uni.getStorageSync("sessionId")
 							},

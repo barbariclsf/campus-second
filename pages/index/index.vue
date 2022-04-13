@@ -2,7 +2,7 @@
 	<view class="sc_index">
 		<!-- 搜索 -->
 		<view class="search_input">
-			<navigator class="" target="" url="/pages/search/index" hover-class="navigator-hover" open-type="navigate">
+			<navigator class="" target="" url="/pages/search/search" hover-class="navigator-hover" open-type="navigate">
 				搜索
 			</navigator>
 		</view>
@@ -10,10 +10,10 @@
 		<!-- 轮播 -->
 		<swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000">
 			<swiper-item>
-				<image src="http://r2apv4kp8.hn-bkt.clouddn.com/campus.jpg" mode="widthFix"></image>
+				<image src="http://r9ghgu7sm.hn-bkt.clouddn.com/997640474298c2b5be4d5448f9fcf690.jpeg" mode="widthFix"></image>
 			</swiper-item>
 			<swiper-item>
-				<image src="http://r2apv4kp8.hn-bkt.clouddn.com/campus.jpg" mode="widthFix"></image>
+				<image src="http://r9ghgu7sm.hn-bkt.clouddn.com/997640474298c2b5be4d5448f9fcf690.jpeg" mode="widthFix"></image>
 			</swiper-item>
 		</swiper>
 

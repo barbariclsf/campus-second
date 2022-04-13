@@ -77,13 +77,13 @@
 				<view class="iconfont icon-shoucang2"></view>
 				<view class="collect_btn">取消收藏</view>
 			</view>
-			<view class="tool_item">
+			<!-- <view class="tool_item">
 				<view class="iconfont icon-liuyan"></view>
 				<view class="">聊天</view>
 			</view>
 			<view class="tool_item btn_sell">
 				<view>我也卖</view>
-			</view>
+			</view> -->
 			<view v-if="goodsInfo.state == 1" class="tool_item btn_buy" @click="toOrderDetail(goodsInfo.goodsId)">
 				<view>我想要</view>
 			</view>

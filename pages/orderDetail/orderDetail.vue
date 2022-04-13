@@ -11,7 +11,13 @@
 			</view>
 			
 		</view>
-		<view class="remark">
+		<view class="msg">
+			<view class="address">
+				<view class="title">
+					地址
+				</view>
+				<input type="text" value="xxxx" />
+			</view>
 			<view class="title">备注信息</view>
 			<input type="text" v-model="remark" placeholder=" 请输入">
 		</view>
@@ -50,7 +56,7 @@
 						if (res.result == 'success') {
 							this.$toast(res.message, 1000, 'none', true);
 							uni.navigateTo({
-								url:'../order/order'
+								url:'../order/order?id=0'
 							})
 						} else {
 							this.$toast(res.message, 1000, 'none', true);
@@ -139,10 +145,10 @@
 			}
 		}
 	}
-	.remark{
+	.msg{
 		
 		margin: 20rpx;
-		height: 170rpx;
+		height: 360rpx;
 		background-color: #FFFFFF;
 		.title{
 			font-size: 32rpx;
@@ -152,6 +158,7 @@
 		input{
 			margin: 20rpx;
 			background-color: #f1f1f1;
+			height: 30rpx;
 			border-radius: 20rpx;
 		}
 	}

@@ -3,7 +3,7 @@
 		<view class="user_info_wrap" >
 			<view class="user_img_wrap" v-show="isLogin">
 				<image class="user_big" :src="userInfo.avatar"></image>
-				<navigator class="user_info" url="../userDetail/userDetail" hover-class="none" >
+				<navigator class="user_info" url="../userDetail/userDetail?userId=0" hover-class="none" >
 					<image class="user_icon" :src="userInfo.avatar"></image>
 					<view class="user_name"> {{ userInfo.userName }}</view>
 				</navigator>

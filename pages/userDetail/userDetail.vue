@@ -6,8 +6,8 @@
 		<view class="user_detail">
 			<view class="user_info">
 				<image :src="userInfo.avatar" mode="widthFix"></image>
-				<button class="edit_btn" v-show="userInfo.userId == userId" @click="editUserInfo">编辑</button>
-				<view class="user_name">L</view>
+				<button class="edit_btn" v-if="userInfo.userId == userId" @click="editUserInfo">编辑</button>
+				<view class="user_name">{{ userInfo.userName}}</view>
 				<view class="sex">
 					<view class="iconfont icon-nvsheng"></view>
 					<view class="sex_type" v-if="userInfo.sex == 0">男</view>
@@ -57,18 +57,24 @@
 			}
 		},
 		onLoad(option){
-			if(option != ''){
+			
+			if(option.userId != 0){
 				this.loadUserInfo(option.userId);
+				
+				this.loadGoodsDate(option.userId);
 			}else{
-				this.userInfo = uni.getStorageSync('userInfo')
+				this.userInfo = uni.getStorageSync('userInfo');
+				this.loadGoodsDate(this.userInfo.userId);
+				console.log(this.userId)
 			}
 			this.userId = uni.getStorageSync("userInfo").userId;
-			this.loadGoodsDate();
+			
+			
 		},
 		methods: {
 			loadUserInfo:function(userId){
 				this.$post('user/selectByUserId',{
-					userId:uni.getStorageSync('userInfo').userId
+					userId:userId
 				}).then(res => {
 						if (res.code == 200) {
 							if (res.result == 'success') {
@@ -85,9 +91,9 @@
 						this.$toast('出错了', 1000, 'none', true);
 					})
 			},
-			loadGoodsDate:function(){
+			loadGoodsDate:function(userId){
 				this.$post('goods/selectByUserId', {
-					userId: uni.getStorageSync('userInfo').userId
+					userId: userId
 				}).then(res => {
 					if (res.code == 200) {
 						if (res.result == 'success') {
